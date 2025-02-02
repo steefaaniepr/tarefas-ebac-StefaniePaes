@@ -5,6 +5,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+//Permite chaves e valores null. Não existe garantia que os dados ficarão ordenados.
+//
+// Para usar uma classe que implementa Map, quaisquer classes que forem utilizadas como chave
+// devem sobrescrever os métodos hashCode() e equals().
+
 public class ExemploHashMap {
     public static void main(String args[]) {
         exemploListaSimples();
