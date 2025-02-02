@@ -1,4 +1,4 @@
-package br.com.stpaes.Collecton.List.LinkedList;
+package br.com.stpaes.Collecton.Queue.LinkedList;
 
 public class Cliente {
     String nome;
