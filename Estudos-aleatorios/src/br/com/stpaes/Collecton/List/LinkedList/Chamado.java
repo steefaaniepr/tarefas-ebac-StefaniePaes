@@ -1,4 +1,4 @@
-package br.com.stpaes.Collecton.Queue.LinkedList;
+package br.com.stpaes.Collecton.List.LinkedList;
 
 public class Chamado {
     String descricao;
