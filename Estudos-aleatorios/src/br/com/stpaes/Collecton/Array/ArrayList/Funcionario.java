@@ -1,4 +1,4 @@
-package br.com.stpaes.Collecton.List.ArrayList;
+package br.com.stpaes.Collecton.Array.ArrayList;
 
 public class Funcionario {
     String nome;
