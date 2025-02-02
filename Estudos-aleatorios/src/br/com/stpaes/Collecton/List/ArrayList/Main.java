@@ -1,4 +1,4 @@
-package br.com.stpaes.Collecton.Array.ArrayList;
+package br.com.stpaes.Collecton.List.ArrayList;
 
 import java.util.ArrayList;
 import java.util.Comparator;

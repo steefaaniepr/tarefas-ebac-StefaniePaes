@@ -1,4 +1,4 @@
-package br.com.stpaes.Collecton.Array.ArrayList;
+package br.com.stpaes.Collecton.List.ArrayList;
 
 public class Aluno {
     String nome;

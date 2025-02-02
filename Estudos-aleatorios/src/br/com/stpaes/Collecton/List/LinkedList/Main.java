@@ -1,4 +1,4 @@
-package br.com.stpaes.Collecton.Array.LinkedList;
+package br.com.stpaes.Collecton.List.LinkedList;
 
 import java.util.LinkedList;
 import java.util.List;
