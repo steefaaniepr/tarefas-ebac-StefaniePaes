@@ -7,6 +7,23 @@ public class Main {
     public static void main(String[] args) {
         atendendoChamados();
         historicoNavegacao();
+        filaAtendimento();
+    }
+
+    private static void filaAtendimento() {
+        List<String> fila = new LinkedList<>();
+
+        fila.add("Cliente 1");
+        fila.add("Cliente 2");
+        fila.add("Cliente 3");
+
+        System.out.println("---Fila de atendimento---");
+        System.out.println(fila);
+
+        while (!fila.isEmpty()) {
+            System.out.println("\nAtendendo: " + fila.remove(0));
+            System.out.println("Fila atual: " + fila);
+        }
     }
 
     private static void historicoNavegacao() {
