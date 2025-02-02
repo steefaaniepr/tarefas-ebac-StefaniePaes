@@ -18,6 +18,7 @@ public class Main {
         funcionarios.add(new Funcionario("Luciana", "Gerente"));
         funcionarios.add(new Funcionario("Stefanie", "Desenvolvedor"));
 
+
         System.out.println("---Funcionários cadastrados---");
         funcionarios.forEach(System.out::println);
 
