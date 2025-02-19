@@ -40,6 +40,16 @@ public class App {
                         "Digite o CPF: ",
                         "Consulta", JOptionPane.INFORMATION_MESSAGE);
                 Consultar(dados);
+            } else if (isExcluir(opcao)) {
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite o CPF: ",
+                        "Excluir", JOptionPane.INFORMATION_MESSAGE);
+                excluir(dados);
+            } else {
+                String dados = JOptionPane.showInputDialog(null,
+                        "Digite os dados do cliente separados por vígula, conforme exemplo: Nome, CPF, Telefone, Número, Endereço, Cidade e Estado",
+                        "Atualização", JOptionPane.INFORMATION_MESSAGE);
+                atualizar(dados);
             }
 
             opcao = JOptionPane.showInputDialog(null,
@@ -47,6 +57,19 @@ public class App {
                     "Opção Inválida", JOptionPane.INFORMATION_MESSAGE);
         }
     }
+
+    private static void atualizar(String dados) {
+        String[] dadosCadastrados = dados.split(",");
+        Cliente cliente = new Cliente(dadosCadastrados[0],dadosCadastrados[1],dadosCadastrados[2],dadosCadastrados[3],dadosCadastrados[4],dadosCadastrados[5],dadosCadastrados[6]);
+        iClienteDAO.alterar(cliente);
+    }
+
+    private static void excluir(String dados) {
+        iClienteDAO.excluir(Long.parseLong(dados));
+        JOptionPane.showMessageDialog(null, "Cliente excluído com sucesso! ",
+                "Sucesso", JOptionPane.INFORMATION_MESSAGE);
+    }
+
 
     private static void Consultar(String dados) {
         Cliente cliente = iClienteDAO.consultar(Long.parseLong(dados));
@@ -74,10 +97,16 @@ public class App {
         }
     }
 
+    private static boolean isExcluir(String opcao) {
+        if ("3".equals(opcao)) {
+            return true;
+        }
+        return false;
+    }
+
     private static boolean isConsultar(String opcao) {
         if ("2".equals(opcao)) {
             return true;
-
         }
         return false;
     }
