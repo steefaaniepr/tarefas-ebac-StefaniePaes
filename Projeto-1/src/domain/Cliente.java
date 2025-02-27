@@ -1,31 +1,40 @@
-package br.com.stpaes.domain;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package domain;
 
 import java.util.Objects;
 
+/**
+ *
+ * @author Pichau
+ */
 public class Cliente {
-
+    
     private String nome;
     private Long cpf;
     private Long tel;
     private String end;
     private Integer numero;
     private String cidade;
-    private String estado;
-
+    private String estado; 
+    
+    
     public Cliente(String nome, String cpf, String tel, String end, String numero, String cidade, String estado) {
         this.nome = nome;
         this.cpf = Long.valueOf(cpf.trim());
-        this.end = end;
         this.tel = Long.valueOf(tel.trim());
+        this.end = end;
         this.numero = Integer.valueOf(numero.trim());
         this.cidade = cidade;
-        this.estado = estado;
+        this.estado = estado;     
     }
-
-    public String getNome() { return nome; }
-
-    public void setNome(String nome) { this.nome = nome; }
-
+    
+    public String getNome() {  return nome; }
+    
+    public void setNome(String nome) { this.nome = nome; } 
+    
     public Long getCpf() { return cpf; }
 
     public void setCpf(Long cpf) { this.cpf = cpf; }
@@ -51,22 +60,24 @@ public class Cliente {
     public void setEstado(String estado) { this.estado = estado; }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Cliente cliente = (Cliente) o;
-        return Objects.equals(cpf, cliente.cpf);
-    }
-
-    @Override
     public int hashCode() {
         return Objects.hashCode(cpf);
     }
-
+    
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Cliente cliente = (Cliente) o; 
+        return Objects.equals(cpf, cliente.cpf);
+    }
+    
     @Override
     public String toString() {
         return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", cpf=" + cpf +
+                "nome='" + nome + '\'' + 
+                ", cpf=" + cpf + 
                 '}';
     }
+    
+    
 }
