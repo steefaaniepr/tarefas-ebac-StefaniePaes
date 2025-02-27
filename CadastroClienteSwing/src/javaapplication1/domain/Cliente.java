@@ -1,9 +1,11 @@
-package br.com.stpaes.domain;
+
+package javaapplication1.domain;
 
 import java.util.Objects;
 
-public class Cliente {
 
+public class Cliente {
+    
     private String nome;
     private Long cpf;
     private Long tel;
@@ -15,12 +17,13 @@ public class Cliente {
     public Cliente(String nome, String cpf, String tel, String end, String numero, String cidade, String estado) {
         this.nome = nome;
         this.cpf = Long.valueOf(cpf.trim());
-        this.end = end;
         this.tel = Long.valueOf(tel.trim());
+        this.end = end;
         this.numero = Integer.valueOf(tel.trim());
         this.cidade = cidade;
         this.estado = estado;
     }
+
 
     public String getNome() { return nome; }
 
@@ -51,7 +54,7 @@ public class Cliente {
     public void setEstado(String estado) { this.estado = estado; }
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(Object o) {     
         if (o == null || getClass() != o.getClass()) return false;
         Cliente cliente = (Cliente) o;
         return Objects.equals(cpf, cliente.cpf);
@@ -69,4 +72,5 @@ public class Cliente {
                 ", cpf=" + cpf +
                 '}';
     }
+    
 }
