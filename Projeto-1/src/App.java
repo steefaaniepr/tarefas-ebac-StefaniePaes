@@ -8,6 +8,9 @@
  * @author Pichau
  */
 public class App {
-    TelaPrincipal tela = new TelaPrincipal();
-    tela.setVisible(true);
+    
+    public static void main(String[] args) {
+        TelaPrincipal tela = new TelaPrincipal();
+        tela.setVisible(true);
+    }
 }

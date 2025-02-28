@@ -6,6 +6,7 @@ package dao;
 
 import domain.Cliente;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -15,6 +16,10 @@ import java.util.Map;
 public class ClienteMapDAO {
     
     private Map <Long, Cliente> map; 
+    
+    public ClienteMapDAO() {
+        this.map = new HashMap<>();
+    }
     
     public Boolean cadastrar(Cliente cliente){
         if (this.map.containsKey(cliente.getCpf())) {
@@ -32,7 +37,7 @@ public class ClienteMapDAO {
         }
     }
     
-    public void alterar(Cliente cliente) {
+    public boolean alterar(Cliente cliente) {
         Cliente clienteCadastrado = this.map.get(cliente.getCpf());
         if (clienteCadastrado != null) {
             clienteCadastrado.setNome(cliente.getNome());
@@ -41,7 +46,9 @@ public class ClienteMapDAO {
             clienteCadastrado.setNumero(cliente.getNumero());
             clienteCadastrado.setCidade(cliente.getCidade());
             clienteCadastrado.setEstado(cliente.getEstado());
+            return true;
         }
+        return false;
     }
     
     public Cliente consultar(Long cpf) {
@@ -51,5 +58,9 @@ public class ClienteMapDAO {
     public Collection<Cliente> buscarTodos() {
         return this.map.values();
     }
-    
+
+    public Cliente buscarporCpf(String cpf) {
+        return map.get(cpf);
+    }
+   
 }
