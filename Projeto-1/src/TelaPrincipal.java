@@ -60,6 +60,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         btnSalvar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuOpcoes = new javax.swing.JMenu();
+        menuSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,6 +125,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
 
         menuOpcoes.setText("Opções");
+
+        menuSair.setText("Sair");
+        menuSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSairActionPerformed(evt);
+            }
+        });
+        menuOpcoes.add(menuSair);
+
         jMenuBar1.add(menuOpcoes);
 
         setJMenuBar(jMenuBar1);
@@ -284,7 +294,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Cliente clienteAtualizado = new Cliente(nome,cpf,tel,end,num,cidade,estado);
         Cliente clienteCadastrado = clienteDAO.buscarporCpf(cpf);
         
-        if(clienteAtualizado.equals(clienteAtualizado)) {
+        if(clienteAtualizado.equals(clienteCadastrado)) {
             JOptionPane.showMessageDialog(this, "Nenhuma alteração foi feita.");
             return;
         }
@@ -332,6 +342,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSalvarActionPerformed
 
+    private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
+        int result; 
+        result = JOptionPane.showConfirmDialog (this, "Deseja sair da aplicação?", "Sair", 
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        if (result == JOptionPane.YES_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_menuSairActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -352,6 +372,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblNome;
     private javax.swing.JLabel lblNumero;
     private javax.swing.JMenu menuOpcoes;
+    private javax.swing.JMenuItem menuSair;
     private javax.swing.JTable tabelaClientes;
     private javax.swing.JTextField txtCPF;
     private javax.swing.JTextField txtCidade;
@@ -367,6 +388,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         modelo.addColumn("CPF");
         modelo.addColumn("Telefone");
         modelo.addColumn("Endereço");
+        modelo.addColumn("Número");
+        modelo.addColumn("Cidade");
+        modelo.addColumn("Estado");
+        
         
         tabelaClientes.setModel(modelo);
     }
