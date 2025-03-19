@@ -19,3 +19,8 @@ No projeto, segui um exemplo básico onde teremos um sistema de notificação po
 A injeção de dependência significa que a classe Usuário não cria diretamente as dependencias,
 elas são passadas pelo construtor. Permitindo assim que no futuro possa trocar a implementação
 sem precisar alterar a classe Usuário.
+
+No Spring, a injeção de dependência é uma técnica onde o próprio Spring cuida de fornecer as dependências para as classes.
+Em vez de as classes precisarem criar ou gerenciar suas dependências, o Spring as fornece automaticamente com as anotações que serão marcadas nas classes durante as aplicações.
+Quando uma classe depende da outra, o spring injeta a dependência automaticamente usando os construtores, setters ou variáveis.
+Isso facilita o desenvolvimento, pois você não precisa se preocupar em instanciar as classes e pode focar mais na lógica da aplicação.
