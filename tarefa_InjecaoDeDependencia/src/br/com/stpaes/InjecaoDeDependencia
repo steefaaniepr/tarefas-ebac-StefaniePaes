@@ -1,0 +1,21 @@
+Tarefa sobre Pesquisar sobre padrão de Injeção de dependência com Spring.
+
+Fonte: https://blog.algaworks.com/injecao-de-dependencias-spring/
+
+Manter o código de um projeto é uma preocupação importante para os desenvolvedores.
+Queremos que o código seja fácil de modificar no futuro, sem precisar refazer muita coisa.
+Para isso, usamos alguns métodos que ajudam a tornar o código mais organizado e flexível.
+
+Um desses métodos é chamado injeção de dependência.
+Ela serve para deixar o código mais simples e organizado, fazendo com que uma classe não precise
+criar seus próprios objetos, mas sim receber esses objetos prontos de fora, de quem chama a classe.
+
+Isso ajuda, porque se, no futuro, a gente precisar trocar algum objeto ou mudar a forma como
+ele funciona, podemos fazer isso sem precisar mexer em todas as partes do código que usam
+esse objeto. Isso facilita bastante na hora de manter e modificar o código.
+
+No projeto, segui um exemplo básico onde teremos um sistema de notificação por diferente meios (E-mail e SMS).
+
+A injeção de dependência significa que a classe Usuário não cria diretamente as dependencias,
+elas são passadas pelo construtor. Permitindo assim que no futuro possa trocar a implementação
+sem precisar alterar a classe Usuário.
