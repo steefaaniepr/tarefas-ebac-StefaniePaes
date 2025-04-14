@@ -1,12 +1,29 @@
 package br.com.stpaes.Generics.Cadastro.Dao;
 
+import br.com.stpaes.Generics.Cadastro.Dao.Generics.GenericDAO;
 import br.com.stpaes.Generics.Cadastro.Domain.Cliente;
+import br.com.stpaes.Generics.Cadastro.Domain.Persistente;
 import br.com.stpaes.Generics.Cadastro.Domain.Produto;
 
 import java.util.Collection;
 import java.util.List;
 
-public class ProdutoDAO implements IProdutoDAO {
+public class ProdutoDAO extends GenericDAO<Produto> implements IProdutoDAO {
+
+    public ProdutoDAO() {
+        super();
+    }
+
+    @Override
+    public Class getTipoClasse() {
+        return null;
+    }
+
+    @Override
+    public void atualizarDados(Produto entity, Produto entidadeCadastrada) {
+
+    }
+
 
 //    @Override
 //    public Boolean cadastrar(Produto produto) {

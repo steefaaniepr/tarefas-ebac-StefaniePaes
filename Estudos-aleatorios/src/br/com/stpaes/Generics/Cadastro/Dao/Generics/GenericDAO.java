@@ -14,13 +14,17 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
 
     public abstract Class<T> getTipoClasse();
 
+    public abstract void atualizarDados(T entity, T entidadeCadastrada);
+
 
     public GenericDAO() {
-        this.map = new HashMap<>();
-        Map<Long, T> mapaInterno = this.map.get(getTipoClasse());
-        if (mapaInterno == null) {
-            mapaInterno = new HashMap<>();
-            this.map.put(getTipoClasse(), mapaInterno);
+        if (this.map == null) {
+            this.map = new HashMap<>();
+            Map<Long, T> mapaInterno = this.map.get(getTipoClasse());
+            if (mapaInterno == null) {
+                mapaInterno = new HashMap<>();
+                this.map.put(getTipoClasse(), mapaInterno);
+            }
         }
     }
 
@@ -37,25 +41,31 @@ public abstract class GenericDAO<T extends Persistente> implements IGenericDAO<T
     @Override
     public void excluir(Long valor) {
         Map<Long, T> mapaInterno = this.map.get(getTipoClasse());
-        if (mapaInterno != null) {
-            T entidadeCadastrada = mapaInterno.get(valor);
-            mapaInterno.remove(valor);
+        T entidadeCadastrada = mapaInterno.get(valor);
+        if (entidadeCadastrada!= null) {
+            this.map.remove(valor, entidadeCadastrada);
         }
     }
 
     @Override
     public void alterar(T entity) {
-
+        Map<Long, T> mapaInterno = this.map.get(getTipoClasse());
+        T entidadeCadastrada = mapaInterno.get(entity.getCodigo());
+        if (entidadeCadastrada!= null) {
+            atualizarDados(entity, entidadeCadastrada);
+        }
     }
 
     @Override
     public T consultar(Long valor) {
-        return null;
+        Map<Long, T> mapaInterno = this.map.get(getTipoClasse());
+        return mapaInterno.get(valor);
     }
 
     @Override
     public Collection<T> buscarTodos() {
-        return List.of();
+        Map<Long, T> mapaInterno = this.map.get(getTipoClasse());
+        return mapaInterno.values();
     }
 
 }

@@ -18,6 +18,17 @@ public class ClienteMapDAO extends GenericDAO<Cliente> implements IClienteDAO{
         return Cliente.class;
     }
 
+    @Override
+    public void atualizarDados(Cliente cliente, Cliente entidadeCadastrada) {
+        entidadeCadastrada.setNome(cliente.getNome());
+        entidadeCadastrada.setTel(cliente.getTel());
+        entidadeCadastrada.setEnd(cliente.getEnd());
+        entidadeCadastrada.setNumero(cliente.getNumero());
+        entidadeCadastrada.setCidade(cliente.getCidade());
+        entidadeCadastrada.setEstado(cliente.getEstado());
+
+    }
+
 
 //    private Map<Long, Cliente> map;
 //
