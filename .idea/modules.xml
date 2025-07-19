@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CadastroClienteSwing/CadastroClienteSwing.iml" filepath="$PROJECT_DIR$/CadastroClienteSwing/CadastroClienteSwing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos-aleatorios/Estudos-aleatorios.iml" filepath="$PROJECT_DIR$/Estudos-aleatorios/Estudos-aleatorios.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExemploException/ExemploException.iml" filepath="$PROJECT_DIR$/ExemploException/ExemploException.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projeto-1/Projeto-1.iml" filepath="$PROJECT_DIR$/Projeto-1/Projeto-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projeto-Deposito-Theeia/Projeto-Deposito-Theeia.iml" filepath="$PROJECT_DIR$/Projeto-Deposito-Theeia/Projeto-Deposito-Theeia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sistema-de-cadastro/Sistema-de-cadastro.iml" filepath="$PROJECT_DIR$/Sistema-de-cadastro/Sistema-de-cadastro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tarefa-Anotation/Tarefa-Anotation.iml" filepath="$PROJECT_DIR$/Tarefa-Anotation/Tarefa-Anotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa-Colecoes-parte-2/tarefa-Colecoes-parte-2.iml" filepath="$PROJECT_DIR$/tarefa-Colecoes-parte-2/tarefa-Colecoes-parte-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa-Padroes-de-Projeto1/tarefa-Padroes-de-Projeto1.iml" filepath="$PROJECT_DIR$/tarefa-Padroes-de-Projeto1/tarefa-Padroes-de-Projeto1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa-collection/tarefa-collection.iml" filepath="$PROJECT_DIR$/tarefa-collection/tarefa-collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa-controle-de-fluxo/tarefa-controle-de-fluxo.iml" filepath="$PROJECT_DIR$/tarefa-controle-de-fluxo/tarefa-controle-de-fluxo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa-poo/tarefa-poo.iml" filepath="$PROJECT_DIR$/tarefa-poo/tarefa-poo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa-wrapper/tarefa-wrapper.iml" filepath="$PROJECT_DIR$/tarefa-wrapper/tarefa-wrapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_InjecaoDeDependencia/tarefa_InjecaoDeDependencia.iml" filepath="$PROJECT_DIR$/tarefa_InjecaoDeDependencia/tarefa_InjecaoDeDependencia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_classes/tarefa_classes.iml" filepath="$PROJECT_DIR$/tarefa_classes/tarefa_classes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefa_generic/tarefa_generic.iml" filepath="$PROJECT_DIR$/tarefa_generic/tarefa_generic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tarefas-ebac-StefaniePaes.iml" filepath="$PROJECT_DIR$/.idea/tarefas-ebac-StefaniePaes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tarefas_calculo_medio/tarefas_calculo_medio.iml" filepath="$PROJECT_DIR$/tarefas_calculo_medio/tarefas_calculo_medio.iml" />
+    </modules>
+  </component>
+</project>
