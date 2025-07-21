@@ -1,10 +1,13 @@
 package br.com.stpaes.Reflexction.Domain;
 
+import br.com.stpaes.Reflexction.Annotation.TipoChave;
+
 import java.util.Objects;
 
 public class Cliente implements Persistente{
 
     private String nome;
+    @TipoChave("getCpf")
     private Long cpf;
     private Long tel;
     private String end;
@@ -99,8 +102,8 @@ public class Cliente implements Persistente{
                 '}';
     }
 
-    @Override
-    public Long getCodigo() {
-        return this.cpf;
-    }
+//    @Override
+//    public Long getCodigo() {
+//        return this.cpf;
+//    }
 }

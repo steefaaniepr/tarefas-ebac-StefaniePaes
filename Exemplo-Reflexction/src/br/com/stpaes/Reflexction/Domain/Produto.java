@@ -1,8 +1,12 @@
 package br.com.stpaes.Reflexction.Domain;
 
+import br.com.stpaes.Reflexction.Annotation.TipoChave;
+
 public class Produto implements Persistente{
 
+    @TipoChave("getCodigo")
     private Long codigo;
+
     private String nome;
 
     public Long getCodigo() {
