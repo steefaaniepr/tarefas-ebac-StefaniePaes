@@ -1,0 +1,26 @@
+O que são Expressões Lambda?
+
+Expressões lambda são funções sem nome que podem ser definidas inline.
+Elas geralmente são usadas para criar funções simples e concisas que são usadas apenas uma vez
+ou poucas vezes. Em vez de definir uma função separada com um nome,
+você pode criar uma expressão lambda diretamente no local onde ela é necessária.
+
+Vantagens:
+- Menos código: Fica mais limpo e fácil de entender.
+- Mais flexível: Dá pra usar com listas, eventos, filtros, ordenações...
+- Acessa variáveis do escopo: Você consegue usar variáveis de fora da lambda sem esforço.
+
+Onde Lambdas brilham?
+
+- Quando você quer passar uma função como argumento (ex: filter, map, forEach).
+- Quando precisa de funções simples e rápidas, sem criar uma classe só pra isso.
+- Em eventos, tipo botões em GUIs (com ActionListener, por exemplo).
+
+Conceitos que andam juntos:
+
+- Funções anônimas: é o nome chique das lambdas.
+- Funções de ordem superior: funções que recebem outras funções como parâmetro (tipo filter).
+- Clausuras (closures): a lambda consegue usar variáveis que estão fora
+dela — como se "lembrasse" do ambiente onde foi criada.
+
+Exemplos de código na Classe Main.
