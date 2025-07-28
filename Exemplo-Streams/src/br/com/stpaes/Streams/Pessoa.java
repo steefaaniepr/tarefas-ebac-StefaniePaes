@@ -9,6 +9,8 @@ public class Pessoa {
     private String nome;
     private String nacionalidade;
     private int idade;
+    public Pessoa() {
+    }
 
     public Pessoa(String id, String nome, String nacionalidade, int idade) {
         this.id = id;
@@ -17,8 +19,8 @@ public class Pessoa {
         this.idade = idade;
     }
 
-    public Pessoa() {
-
+    public Pessoa(Pessoa pessoa) {
+        this(pessoa.id, pessoa.nome, pessoa.nacionalidade, pessoa.idade);
     }
 
     public String getId() {
@@ -71,5 +73,15 @@ public class Pessoa {
     @Override
     public int hashCode() {
         return Objects.hash(id, nome);
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", nacionalidade='" + nacionalidade + '\'' +
+                ", idade=" + idade +
+                '}';
     }
 }
