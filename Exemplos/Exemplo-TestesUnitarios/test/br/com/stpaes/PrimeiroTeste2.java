@@ -1,4 +1,4 @@
-package br.com.stpaes.testes;
+package br.com.stpaes;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -14,7 +14,7 @@ public class PrimeiroTeste2 {
         @Test
         public void testNotEquals(){
             String nome = "Stefanie";
-            Assert.assertNotEquals("Stefanie", nome );
+            Assert.assertNotEquals("Stefanie1", nome );
         }
 
 

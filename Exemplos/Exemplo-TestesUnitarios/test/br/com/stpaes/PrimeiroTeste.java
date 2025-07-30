@@ -1,4 +1,4 @@
-package br.com.stpaes.testes;
+package br.com.stpaes;
 
 import org.junit.Assert;
 import org.junit.Test;
