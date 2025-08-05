@@ -6,14 +6,33 @@ import br.com.stpaes.dao.IContratoDao;
 
 public class ContratoService implements IContratoService {
 
-    IContratoDao contratoDao;
+    private IContratoDao contratoDao;
 
     public ContratoService(IContratoDao dao) {
-        this.contratoDao = new ContratoDao();
+        this.contratoDao = dao;
     }
 
     @Override
     public String salvar() {
+        contratoDao.salvar();
         return "Sucesso";
+    }
+
+    @Override
+    public String buscar() {
+        contratoDao.buscar();
+        return "Conferindo no banco de dados";
+    }
+
+    @Override
+    public String excluir() {
+        contratoDao.excluir();
+        return "Excluido com sucesso";
+    }
+
+    @Override
+    public String atualizar() {
+        contratoDao.atualizar();
+        return "Atualizado com sucesso";
     }
 }
