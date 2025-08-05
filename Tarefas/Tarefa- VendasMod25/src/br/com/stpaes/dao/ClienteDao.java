@@ -5,12 +5,17 @@ import br.com.stpaes.domain.Cliente;
 public class ClienteDao implements IClienteDao{
 
     @Override
-    public void salvar(Cliente cliente) {
-
+    public Boolean salvar(Cliente cliente) {
+        return true;
     }
 
     @Override
     public Cliente buscarPorCpf(Long cpf) {
         return null;
+    }
+
+    @Override
+    public void excluir(Long cpf) {
+
     }
 }

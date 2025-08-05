@@ -4,8 +4,8 @@ import br.com.stpaes.domain.Cliente;
 
 public class ClienteDaoMock implements IClienteDao{
     @Override
-    public void salvar(Cliente cliente) {
-
+    public Boolean salvar(Cliente cliente) {
+        return true;
     }
 
     @Override
@@ -13,5 +13,10 @@ public class ClienteDaoMock implements IClienteDao{
         Cliente cliente = new Cliente();
         cliente.setCpf(cpf);
         return cliente;
+    }
+
+    @Override
+    public void excluir(Long cpf) {
+
     }
 }

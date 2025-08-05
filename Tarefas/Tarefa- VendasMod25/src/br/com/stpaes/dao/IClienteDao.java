@@ -4,6 +4,8 @@ import br.com.stpaes.domain.Cliente;
 
 public interface IClienteDao {
 
-    void salvar(Cliente cliente);
+    Boolean salvar(Cliente cliente);
     Cliente buscarPorCpf(Long cpf);
+
+    void excluir(Long cpf);
 }
