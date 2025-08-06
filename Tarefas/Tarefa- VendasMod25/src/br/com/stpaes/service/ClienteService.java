@@ -1,8 +1,8 @@
 package br.com.stpaes.service;
 
-import br.com.stpaes.dao.ClienteDao;
 import br.com.stpaes.dao.IClienteDao;
 import br.com.stpaes.domain.Cliente;
+import br.com.stpaes.exception.TipoChaveNaoEncontradaException;
 
 public class ClienteService implements IClienteService{
 
@@ -13,17 +13,22 @@ public class ClienteService implements IClienteService{
     }
 
     @Override
-    public Boolean salvar(Cliente cliente) {
-        return clienteDao.salvar(cliente);
+    public Boolean salvar(Cliente cliente) throws TipoChaveNaoEncontradaException {
+        return clienteDao.cadastrar(cliente);
     }
 
     @Override
-    public Cliente buscarPorCpf(Long cpf) {
-        return clienteDao.buscarPorCpf(cpf);
+    public Cliente consultar(Long cpf) {
+        return clienteDao.consultar(cpf);
     }
 
     @Override
     public void excluir(Long cpf) {
         clienteDao.excluir(cpf);
+    }
+
+    @Override
+    public void alterar(Cliente cliente) throws TipoChaveNaoEncontradaException {
+        clienteDao.alterar(cliente);
     }
 }

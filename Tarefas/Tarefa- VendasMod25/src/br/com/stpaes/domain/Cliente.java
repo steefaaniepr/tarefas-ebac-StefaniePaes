@@ -2,7 +2,7 @@ package br.com.stpaes.domain;
 
 import java.util.Objects;
 
-public class Cliente {
+public class Cliente extends Persistente {
 
     private String nome;
     private Long cpf;

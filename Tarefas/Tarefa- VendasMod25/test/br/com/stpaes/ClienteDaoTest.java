@@ -3,6 +3,7 @@ package br.com.stpaes;
 import br.com.stpaes.dao.ClienteDaoMock;
 import br.com.stpaes.dao.IClienteDao;
 import br.com.stpaes.domain.Cliente;
+import br.com.stpaes.exception.TipoChaveNaoEncontradaException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,22 +27,28 @@ public class ClienteDaoTest {
         cliente.setNumero(1);
         cliente.setCidade("São Paulo");
         cliente.setEstado("SP");
-        clienteDao.salvar(cliente);
     }
 
     @Test
-    public void salvarClienteTest(){
-        clienteDao.salvar(cliente);
+    public void salvarClienteTest() throws TipoChaveNaoEncontradaException {
+        clienteDao.cadastrar(cliente);
     }
 
     @Test
     public void pesquisarClienteTest(){
-        Cliente clienteConsultado = clienteDao.buscarPorCpf(cliente.getCpf());
+        Cliente clienteConsultado = clienteDao.consultar(cliente.getCpf());
         Assert.assertNotNull(clienteConsultado);
     }
 
     @Test
     public void excluirCliente(){
         clienteDao.excluir(cliente.getCpf());
+    }
+
+    @Test
+    public void alterarCliente() throws TipoChaveNaoEncontradaException {
+        cliente.setNome("Stefanie");
+        clienteDao.alterar(cliente);
+        Assert.assertEquals("Stefanie", cliente.getNome());
     }
 }

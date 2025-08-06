@@ -1,22 +1,38 @@
 package br.com.stpaes.dao;
 
 import br.com.stpaes.domain.Cliente;
+import br.com.stpaes.exception.TipoChaveNaoEncontradaException;
+
+import java.util.Collection;
+import java.util.List;
 
 public class ClienteDaoMock implements IClienteDao{
+
     @Override
-    public Boolean salvar(Cliente cliente) {
+    public Boolean cadastrar(Cliente entity) throws TipoChaveNaoEncontradaException {
         return true;
     }
 
     @Override
-    public Cliente buscarPorCpf(Long cpf) {
+    public void excluir(Long valor) {
+
+    }
+
+    @Override
+    public void alterar(Cliente entity) throws TipoChaveNaoEncontradaException {
+
+    }
+
+    @Override
+    public Cliente consultar(Long valor) {
         Cliente cliente = new Cliente();
-        cliente.setCpf(cpf);
+        cliente.setCpf(valor);
         return cliente;
     }
 
     @Override
-    public void excluir(Long cpf) {
-
+    public Collection<Cliente> buscarTodos() {
+        return List.of();
     }
+
 }

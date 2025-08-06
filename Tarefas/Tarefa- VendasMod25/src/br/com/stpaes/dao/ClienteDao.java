@@ -1,21 +1,22 @@
 package br.com.stpaes.dao;
 
+import br.com.stpaes.dao.generic.GenericDao;
 import br.com.stpaes.domain.Cliente;
+import br.com.stpaes.domain.Persistente;
 
-public class ClienteDao implements IClienteDao{
+public class ClienteDao extends GenericDao<Cliente> implements IClienteDao{
 
-    @Override
-    public Boolean salvar(Cliente cliente) {
-        return true;
+    public ClienteDao() {
+        super();
     }
 
     @Override
-    public Cliente buscarPorCpf(Long cpf) {
-        return null;
+    public Class<Cliente> getTipoClasse() {
+        return Cliente.class;
     }
 
     @Override
-    public void excluir(Long cpf) {
+    public void atualizarDados(Cliente entity, Cliente entityCadastrado) {
 
     }
 }
