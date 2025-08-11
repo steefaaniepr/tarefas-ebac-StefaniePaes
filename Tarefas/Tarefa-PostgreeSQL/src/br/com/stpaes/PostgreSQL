@@ -1,0 +1,46 @@
+
+PostgreSQL
+
+O PostgreSQL é um sistema gerenciador de banco de dados relacional de código aberto (open source) e de natureza objeto-relacional.
+Reconhecido por sua robustez, extensibilidade e aderência aos padrões SQL,
+o PostgreSQL é amplamente utilizado em aplicações que exigem integridade, escalabilidade e flexibilidade no tratamento de dados.
+
+Desenvolvido e mantido há mais de duas décadas por uma comunidade global de especialistas, o PostgreSQL é compatível com diversos sistemas operacionais, incluindo Linux, macOS, Windows e variantes de UNIX.
+
+Principais Caracteristicas:
+
+- Modelo Relacional e Objeto-Relacional: suporte a dados estruturados e complexos, incluindo tipos de dados personalizados.
+- Compatibilidade com SQL e JSON: possibilita consultas híbridas entre dados relacionais e não relacionais.
+- Conformidade com ACID: garante atomicidade, consistência, isolamento e durabilidade nas transações.
+- Extensibilidade: permite a criação de funções, operadores, tipos e extensões, como PostGIS para dados geoespaciais.
+- Amplo Suporte a Tipos de Dados: números, textos, datas, booleanos, UUID, arrays, JSONB, hstore, tipos de faixa, entre outros.
+- Execução de Consultas Complexas: otimização avançada e suporte a operações de alta complexidade.
+- Segurança e Recuperação: implementação de Write-Ahead Logging (WAL) para garantir integridade e recuperação de dados.
+- Drivers Multilíngues: compatibilidade com diversas linguagens de programação, incluindo Java, Python, Ruby e C/C++.
+
+Principais Aplicações:
+O PostgreSQL é utilizado em diversos contextos, tais como:
+
+- Sistemas corporativos de grande porte.
+- Aplicações web de alta demanda e escalabilidade.
+- Plataformas de análise de dados e Business Intelligence.
+- Sistemas geoespaciais e de cartografia digital (via PostGIS).
+
+Funcionalidades e Operações Comuns:
+Entre as operações mais frequentes na utilização do PostgreSQL, destacam-se
+
+- Consultas e Filtragem: uso de SELECT, WHERE, ORDER BY, GROUP BY, LIMIT.
+- Modelagem e Estruturação de Dados: criação, alteração e exclusão de tabelas, colunas e schemas.
+- Manipulação de Registros: INSERT, UPDATE, DELETE e upserts.
+- Controle de Fluxo: utilização de CASE, COALESCE, e estruturas condicionais ou de repetição (LOOP, WHILE, FOR).
+- Gerenciamento de Transações: comandos BEGIN, COMMIT e ROLLBACK, além da aplicação de restrições como PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL e CHECK.
+- Relacionamentos entre Tabelas: aplicação de joins e organização por schemas.
+- Automação e Programabilidade: criação de funções, procedimentos armazenados e triggers.
+- Otimização de Desempenho: criação de índices, análise de planos de execução e ajuste de consultas.
+- Alta Disponibilidade e Recuperação: replicação, backups e estratégias de recuperação de falhas.
+
+Referencias:
+
+https://www.postgresql.org/docs/
+https://wiki.postgresql.org/
+https://www.geeksforgeeks.org/postgresql-tutorial/
