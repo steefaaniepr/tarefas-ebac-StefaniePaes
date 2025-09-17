@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aee8782a-2f55-4a66-9a10-e3f9eed35318" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/br/com/stpaes/Domain/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/stpaes/dao/generic/jdbc/dao/IProdutoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/br/com/stpaes/dao/generic/jdbc/dao/ProdutoDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/br/com/stpaes/ProdutoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/stpaes/dao/generic/jdbc/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/stpaes/dao/generic/jdbc/ConnectionFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.ClienteTest.executor": "Run",
+    "JUnit.ProdutoTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -125,7 +120,7 @@
       <updated>1757540929570</updated>
       <workItem from="1757540931964" duration="1079000" />
       <workItem from="1758130238883" duration="6000" />
-      <workItem from="1758142032870" duration="4354000" />
+      <workItem from="1758142032870" duration="4913000" />
     </task>
     <servers />
   </component>
