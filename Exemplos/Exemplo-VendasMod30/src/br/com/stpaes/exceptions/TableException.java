@@ -1,0 +1,4 @@
+package br.com.stpaes.exceptions;
+
+public class TableException {
+}
